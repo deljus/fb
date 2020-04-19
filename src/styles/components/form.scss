@@ -1,0 +1,25 @@
+form{
+  .form-control{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 20px;
+
+    &.error{
+      input{
+        border-color: $error-color;
+      }
+    }
+    .error-text{
+      color: $error-color;
+      font-size: 13px;
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+    }
+  }
+
+  label{
+    margin-bottom: 10px;
+  }
+}

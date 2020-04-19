@@ -1,0 +1,14 @@
+@import "main";
+
+// main style
+
+.left-column{
+  border-right: 1px solid $border-color;
+  box-shadow: 2px 2px 13px 0px rgba(0,0,0,0.26);
+  z-index: 5;
+}
+
+.point-name-form{
+  padding: 7px 10px;
+  border-bottom: 1px solid $border-color;
+}

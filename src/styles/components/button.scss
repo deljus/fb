@@ -1,0 +1,52 @@
+$sizes: ("sm": 24px, "md": 32px, "lg": 40px);
+$types:  (
+        "primary": $primary-color,
+        "secondary": $secondary-color,
+        "info": $info-color,
+        "danger": $error-color,
+        "warning": $warning-color,
+        "success": $success-color,
+);
+
+.button {
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+
+
+  @each $key, $size in $sizes {
+    &.size-#{$key} {
+      height: $size;
+    }
+    &.circle {
+      &.size-#{$key} {
+        border-radius: 40px;
+      }
+    }
+  }
+
+  @each $key, $color in $types {
+    &.btn-#{$key} {
+      background-color: $color;
+
+      &:hover {
+        background-color: rgba($color, $hover-opacity);
+      }
+
+      &.ghost{
+        background-color: transparent;
+        color: $color;
+        border: 1px dashed rgba($color, $hover-opacity);
+      }
+
+    }
+  }
+
+
+}
+
